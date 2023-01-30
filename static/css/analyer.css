@@ -1,0 +1,465 @@
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-weight: 300;
+}
+div{
+    font-weight: 300;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    background-color:#30344e;
+    height: 11vh;
+    display: flex;
+    align-content: center;
+    justify-content: right;
+}
+.header a span{
+    font-size: 2.5rem;
+    margin-right: 30%;
+    color: #FCFCFD;
+    margin-right: 20vw;
+}
+.site{
+    height: 140vh;
+    margin-top: 0px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.side-bar{
+    width: 20%;
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.profile-pic{
+    height:30%;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+.profile-pic img{
+    height:95%;
+    width: 85%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #a6a6a6;
+}
+.profile-info{
+    height:auto;
+    width:100%;
+    margin-bottom: 10px;
+
+}
+.side-bar hr{
+    width:80%;
+    color:#a6a6a6;
+}
+.profile-info .username{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.profile-info-contacts{
+    width: 100%;
+    display: flex;
+    color:#a6a6a6;
+}
+.profile-info-contacts .icon{
+ margin-top: 5px;
+ margin-bottom: 7px;
+ margin-right: 15px;
+ margin-left: 10px;
+}
+.profile-info-contacts .text{
+  margin-top: 5px;
+    
+}
+.profile-edit{
+    margin-top: 10px;
+    height:10%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-edit span{
+    display: flex;;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 15px;
+    height: 50%;
+    width: 80%;
+    border: 1px solid #30344e;
+    transition: .25s;
+}
+.profile-edit span:hover{
+    background-color: #30344e;
+    color:#fcfcfd;
+    cursor: pointer;
+}
+.main-page{
+    width: 60%;
+}
+.page-nav{
+    background-color: white;
+    height: 7%;
+    border-bottom: 1px solid rgb(233, 230, 230);
+    display: flex;
+    align-items: center;
+}
+.page-nav button{
+    background-color: white;
+    height: 100%;
+    padding: 5px 20px 0 20px;
+    font-weight: 300;
+    font-size: medium;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+
+}
+.page-nav a :active{
+    margin-top:2px;
+    border-bottom: 2px solid #ff5757;
+    color:#ff5757;
+}
+.page-info{
+    background-color: white;
+    padding-top: 8px;
+    height: 5%;
+    display: flex;
+    font-weight: 300;
+    align-items: center;
+}
+.page-content{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border: 1px solid #e4e1e1;
+}
+.content-container{
+    height: 48%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content-box{
+    height: 100%;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 2px 2px rgb(214, 212, 212);
+    border: white;
+}
+.content-image{
+height: 50%;
+width: 100%;
+display: flex;
+}
+.content-image img{
+    height: 100%;
+    width: 100%;
+}
+.content-info{
+    height: 30%;
+    width: 100%;
+}
+.content-info h5{
+    margin:20px 0px 20px 20px;
+}
+.content-info p{
+    margin:20px 0px 20px 20px;
+}
+.content-btn{
+    height: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+.content-btn a{
+    color: black;
+}
+.content-btn span{
+    margin-left: 20px;
+    font-size: 15px;
+    height: 50%;
+    width: 25%;
+    border: 1px solid #30344e;
+    padding: 10px 20px;
+    transition: .25s;
+}
+.content-btn span:hover{
+    background-color: #30344e;
+    color:#fcfcfd;
+    cursor: pointer;
+}
+.login-outer-div{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.login-div{
+    background-color: white;
+    width: 30%;
+    height:80%;
+    border-radius: 5px;
+    min-width: 300px;
+}
+.login-form{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.register-form input{
+    height: 40px;
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.register-form label{
+    margin: 10px 0px 0px 0px;
+    font-weight: 500;
+}
+.reg-btn{
+    background-color: rgb(81, 132, 228);
+    width: 90%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+
+}
+.login-form p{
+    margin: 10px 0px 20px 0px;
+}
+.login-form h4{
+    margin: 20px 0px 10px 0px;
+}
+.search{
+    height: 60px;
+    width: 90%;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.form-btn{
+    background-color: rgb(81, 132, 228);
+    width: 90%;
+    height: 50px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+
+}
+@media screen and (max-width: 1000px) {
+    .side-bar{
+        display: none;
+    }
+    .main-page{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-page{
+        width: 60%;
+    }    
+} 
+.mySlides {
+    display: none;
+}
+.img-slide {
+    vertical-align: middle;
+    height: 70vh;
+    width: 70vw;
+}
+.slideshow-container {
+  max-width: 1000px;
+  margin: auto;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-bottom: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+.tags-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tags-container a{
+    text-decoration: none;
+    color: black;
+}
+.tags{
+  padding: 8px 10px;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color:#a6a6a6;
+}
+.tags:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.numbertext {
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color:#a6a6a6;
+}
+.cancel{
+  font-size: 30px;
+  padding: 0px ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 900;
+  background-color:#a6a6a6;
+  cursor: pointer;
+}
+.cancel:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s;
+}
+.icon-cancel{
+    color: black;
+}
+.icon-cancel:hover{
+    color: white;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 0.5s;
+}
+.alert{
+    position: absolute;
+    top: 0;
+    margin-left: 35%;
+    background-color: white;
+    display: flex;
+    justify-content:end;
+    height: 46%;
+    width: 36%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 400px;
+}
+.alert h2{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.alert button{
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.yes{
+    margin-left: 130px;
+    background-color: rgb(87, 177, 212);
+}
+.no{
+    background-color: #e2e1e1;
+    margin-left: 5px;
+
+}
+.topic{
+    margin-left: 19%;
+    color: white;
+}
+.success-alert{
+    position: absolute;
+    top: 0;
+    margin-left: 35%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:end;
+    height: 30%;
+    width: 36%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    min-width: 400px;
+}
+.success-alert h3{
+    margin-top: 0px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.success-alert button{
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: rgb(87, 177, 212);
+}
+video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+}

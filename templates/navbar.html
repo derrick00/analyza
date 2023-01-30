@@ -1,0 +1,17 @@
+<div class="header" style="
+position: absolute;
+background-color: rgb(60, 50, 87);
+height: 60px;
+left: 0px;
+right: 0px;
+top: 0px;
+">
+   {% if request.user.is_authenticated %}
+   <a href="{% url 'logout' %}">
+      <button class="auth-button">Logout</button>
+   </a>
+   {% else %}
+   <a href="{% url 'login' %}"></a> 
+   {% endif %}
+
+</div>

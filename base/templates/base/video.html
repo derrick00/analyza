@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% load static %}
+
+{%  block content %}
+  <body class="body-analyse" 
+  style="background: url('{% static "img/forest2.jpg" %}') 50% 0 no-repeat fixed";
+  >
+
+    <h2 class="topic">Analyse videos</h2>
+
+    <div class="slideshow-container">
+      <div class="cancel"><a href="{% url 'home' %}"><ion-icon name="close" class="icon-cancel"></ion-icon></a></div>
+
+      <video width="400" height="300" controls >
+        <source src="{% static 'video/video2.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>        
+  
+    <br>
+
+    <div class="tags-container">
+      <a href="{% url 'success' %}"><span class="tags">funny</span></a>
+      <a href="{% url 'success' %}"><span class="tags">Action</span></a>
+      <a href="{% url 'success' %}"><span class="tags">Good</span></a>
+      <a href="{% url 'success' %}"><span class="tags">scary</span></a>
+    </div>
+
+    <script src="{% static '/js/auto.js' %}"></script>
+  </body>
+{% endblock content %}

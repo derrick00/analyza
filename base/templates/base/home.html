@@ -1,0 +1,120 @@
+{% extends "main.html" %}
+{% load static %}
+
+{%  block content %}
+
+<div class="main" style>
+  <div class="header">
+    <a href="{% url 'logout' %}">
+       <span><ion-icon name="log-out"></ion-icon></span>
+    </a>
+
+    
+  </div>
+  <div class="site">
+    <div class="side-bar">
+      <div class="profile-pic">
+        <img src="{% static 'img/user2.jpg' %}" >
+      </div>
+      <hr>
+      <div class="profile-info">
+        <div class="username">Derrick Muturi</div>
+        <div class="profile-info-contacts">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <span class="text">derrick10@gmail.com</span>
+        </div>
+        <div class="profile-info-contacts">
+          <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+          <span class="text">254 700 001 234</span>
+        </div>
+        <div class="profile-info-contacts">
+          <span class="icon"><ion-icon name="wallet-outline"></ion-icon></span>
+          <span class="text">Ksh. 100</span>
+        </div>
+      </div>
+      <hr>
+      <div class="profile-edit">
+        <span>Edit Profile</span>
+      </div>
+    </div>
+    <div class="main-page">
+      <div class="page-nav">
+        <a href="{% url 'home' %}"><button>Home</button></a>
+        <a href="{% url 'campaign' %}"><button>Past Campaign</button></a>
+        <a href="{% url 'wallet' %}"><button>Wallet</button></a>
+        <a href="{% url 'settings' %}"><button>Settings</button></a>
+      </div>
+      <div class="page-info">Available campaign</div>
+      <div class="page-content">
+        <div class="content-container">
+          <div class="content-box">
+            <div class="content-image">
+              <img src="{% static 'img/campaign.jpg' %}" >
+            </div>
+            <div class="content-info">
+              <h5>ANALYSE MIXED CONTENT</h5>
+              <p>random</p>
+            </div>
+            <div class="content-btn random">
+                <span>Participate</span>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-image">
+              <img src="{% static 'img/campaign.jpg' %}" >
+            </div>
+            <div class="content-info">
+              <h5>ANALYSE EXTERNAL SMS</h5>
+              <p>text(sms)</p>
+            </div>
+            <div class="content-btn">
+              <a href="{% url 'texts' %}">
+              <span>Participate</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="content-container">
+          <div class="content-box">
+            <div class="content-image">
+              <img src="{% static 'img/campaign.jpg' %}" >
+            </div>
+            <div class="content-info">
+              <h5>ANALYSE MEMES</h5>
+              <p>image(memes)</p>
+              <div class="content-btn">
+                <a href="{% url 'files' %}">
+                  <span>Participate</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="content-box">
+            <div class="content-image">
+              <img src="{% static 'img/campaign.jpg' %}" >
+            </div>
+            <div class="content-info">
+              <h5>ANALYSE SHORT VIDEOS</h5>
+              <p>tiktok-like videos</p>
+            </div>
+            <div class="content-btn">
+              <a href="{% url 'videos' %}">
+                <span>Participate</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const randomize = document.querySelector(".random")
+const links = ["videos", "texts","files"]
+
+randomize.addEventListener("click",()=>{
+  let linkIndex = Math.floor(Math.random() * 2 + 1)
+  console.log(linkIndex)
+  window.location.href = links[linkIndex]
+})
+</script>
+
+{% endblock content %}

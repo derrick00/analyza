@@ -1,0 +1,58 @@
+{% extends "main.html" %}
+{% load static %}
+
+{%  block content %}
+
+<div class="main" style>
+  <div class="header">
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}">
+       <span><ion-icon name="log-in"></ion-icon></span>
+    </a>
+    {% else %}
+    <a href="{% url 'login' %}">
+      <span><ion-icon name="log-in"></ion-icon></span>
+    </a> 
+    {% endif %}
+    
+  </div>
+  <div class="site">
+    <div class="side-bar">
+      <div class="profile-pic">
+        <img src="{% static 'img/mason.jpeg' %}" >
+      </div>
+      <hr>
+      <div class="profile-info">
+        <div class="username">Mason Mount</div>
+        <div class="profile-info-contacts">
+          <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+          <span class="text">mason@chelsea.com</span>
+        </div>
+        <div class="profile-info-contacts">
+          <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+          <span class="text">254 700 000 356</span>
+        </div>
+        <div class="profile-info-contacts">
+          <span class="icon"><ion-icon name="wallet-outline"></ion-icon></span>
+          <span class="text">Ksh. 100</span>
+        </div>
+      </div>
+      <hr>
+      <div class="profile-edit">
+        <span>Edit Profile</span>
+      </div>
+    </div>
+
+    <div class="main-page">
+      <div class="page-nav">
+        <a href="{% url 'home' %}"><button>Home</button></a>
+        <a href="{% url 'campaign' %}"><button>Past Campaign</button></a>
+        <a href="{% url 'wallet' %}"><button>Wallet</button></a>
+        <a href="{% url 'settings' %}"><button>Settings</button></a>
+      </div>
+      <div class="page-info">Past campaign you participated in </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

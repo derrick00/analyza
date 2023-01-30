@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+{% load static %}
+
+{%  block content %}
+<body class="body-analyse" 
+style="background: url('{% static "img/forest2.jpg" %}') 50% 0 no-repeat fixed";>
+
+    <div class="success-alert">
+        <h2>Great!</h2>
+        <p>You have viewed all your campaign!</p>
+        <p>Check again tomorrow.</p>
+        <div>
+          <a href="{% url 'home' %}"><button class="no">Home</button></a>
+        </div>
+    </div>
+
+</body>
+
+{% endblock content %}

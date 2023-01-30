@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+{% if page == 'register' %}
+
+<h1>Register User</h1>
+
+<form method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <input type="submit" value="Register User">
+</form>
+{% else %}
+<div class="login-outer-div" 
+style="background: url('{% static "img/blue-white.jpg" %}') 50% 0 no-repeat fixed";>
+">  
+    <div class="login-div">
+        <form action="{% url 'login' %}" method="POST" class="login-form">
+            {% csrf_token %}
+            <p>Sign in to continue</p>
+            <h4>Email Address</h4>
+            <input type="text" name="username" placeholder="Username" class="search">
+            <h4>password</h4>
+            <input type="password" name="password" placeholder="Enter password" class="search">
+            <input type="submit" value="login" class="form-btn">
+
+        </form>
+    </div>
+</div>
+{% endif %}
+{% endblock content %}
