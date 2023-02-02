@@ -13,9 +13,7 @@
     <input type="submit" value="Register User">
 </form>
 {% else %}
-<div class="login-outer-div" 
-style="background: url('{% static "img/blue-white.jpg" %}') 50% 0 no-repeat fixed";>
-">  
+<div class="login-outer-div" style="background-color:rgba(33, 17, 54, 0.863);">  
     <div class="login-div">
         <form action="{% url 'login' %}" method="POST" class="login-form">
             {% csrf_token %}

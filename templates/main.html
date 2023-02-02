@@ -169,31 +169,33 @@ div{
     border: 1px solid #e4e1e1;
 }
 .content-container{
-    height: 48%;
+    height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .content-box{
-    height: 100%;
-    width: 48%;
+    height: 90%;
+    width: auto;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 2px 2px rgb(214, 212, 212);
     border: white;
+    margin-right: 20px;
+    margin-bottom: 0px;
 }
 .content-image{
-height: 50%;
-width: 100%;
-display: flex;
+    height: 40%;
+    width: 100%;
+    display: flex;
 }
 .content-image img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .content-info{
-    height: 30%;
+    height: auto;
     width: 100%;
 }
 .content-info h5{
@@ -205,7 +207,8 @@ display: flex;
 .content-btn{
     height: auto;
     width: 50%;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 .content-btn a{
     color: black;
@@ -296,14 +299,83 @@ display: flex;
         display: none;
     }
     .main-page{
-        width: 70%;
+        width: 75%;
+        position: relative;
     }
+    .page-nav{
+        position: absolute;
+        display: flex;
+        align-items: center;
+    }
+    .content-box{
+        height: auto;;
+        margin-bottom: 20px;
+    }   
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (min-width: 351px) and (max-width: 500px){
     .main-page{
-        width: 60%;
-    }    
+        width: 80%;
+    }
+    .content-container{
+        grid-template-columns: 1fr;
+        width: 100%;
+        align-items: center;
+    }
 } 
+@media screen and (max-width: 350px) {
+.content-container{
+    grid-template-columns: 1fr;
+    width: 100%;
+}
+.content-box{
+    height: auto;
+    margin-bottom: 20px;
+}
+.main-page{
+    width: 100%;
+}
+.page-nav{
+    height: auto;
+    width: 90%;
+    border-bottom: 1px solid rgb(233, 230, 230);
+    display: flex;
+    align-items: center;
+}
+.page-nav button{
+    background-color: white;
+    height: 100%;
+    padding: 3px 10px 0 10px;
+    font-weight: 300;
+    font-size: small;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.login-outer-div{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.login-div{
+    position: absolute;
+    top: 0;
+    background-color: white;
+    width: 30%;
+    height:90%;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+.login-form{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+}
 .mySlides {
     display: none;
 }
@@ -401,16 +473,14 @@ display: flex;
 .alert{
     position: absolute;
     top: 0;
-    margin-left: 35%;
     background-color: white;
     display: flex;
     justify-content:end;
     height: 46%;
-    width: 36%;
+    width: 100%;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    min-width: 400px;
 }
 .alert h2{
     margin-bottom: 20px;
@@ -438,25 +508,22 @@ display: flex;
     color: white;
 }
 .success-alert{
-    position: absolute;
-    top: 0;
-    margin-left: 35%;
     background-color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content:end;
     height: 30%;
-    width: 36%;
+    width: 70%;
+    margin-left: 15%;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-    min-width: 400px;
 }
 .success-alert h3{
     margin-top: 0px;
     align-items: center;
     margin-bottom: 20px;
+    width: 100%;
 }
 .success-alert button{
     height: auto;
